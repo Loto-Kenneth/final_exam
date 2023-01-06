@@ -1,0 +1,22 @@
+public class SeniorCustomer extends Customer {
+    private static final double DISCOUNT = 0.2;
+    private double amount;
+
+    public SeniorCustomer(String name, int age, double amount) {
+        super(name, age);
+        this.amount = amount;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public double calculateBill() {
+        return amount * (1 - DISCOUNT);
+    }
+}
