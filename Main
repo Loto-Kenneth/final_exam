@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+	Customer customer = new Customer("John", 30);
+        RegularCustomer regularCustomer = new RegularCustomer("Jane", 25, 100.0);
+        SeniorCustomer seniorCustomer = new SeniorCustomer("Bob", 65, 200.0);
+
+        Customer[] customers = new Customer[3];
+	customers[0] = customer;
+        customers[1] = regularCustomer;
+        customers[2] = seniorCustomer;
+
+        for (Customer c : customers) {
+            System.out.println("Customer's name: " + c.getName());
+	    System.out.println("Customer's age: " + c.getAge());
+            System.out.println("Bill: " + c.calculateBill());
+        }
+    }
+}
